@@ -1,8 +1,20 @@
 // translate input (english text) into morse code
 
+const argTypeError = new Error("Argument should be a string");
+
+const argNumsError = new Error("You can only provide one argument");
+
+export const translateToMorse = (...str) => {
+  if (str.length !== 0) {
+    throw argNumsError;
+  }
+};
+
 // 1 space between english WORDS
 
 // translate input (morse code) into english
+
+export const translateToEng = () => {};
 
 // 1 space between morse CHARACTERS
 
