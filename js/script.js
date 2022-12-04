@@ -1,3 +1,5 @@
+const morseDict = require("./data");
+const domObjects = require("./dom");
 // translate input (english text) into morse code
 
 const argTypeError = new Error("Argument should be a string");
@@ -5,9 +7,14 @@ const argTypeError = new Error("Argument should be a string");
 const argNumsError = new Error("You can only provide one argument");
 
 export const translateToMorse = (...str) => {
-  if (str.length !== 0) {
-    throw argNumsError;
-  }
+  const input = str;
+  const dictionary = Object.entries(morseDict);
+  let result = "";
+
+  console.log(morseDict);
+
+  console.log(input);
+  return;
 };
 
 // 1 space between english WORDS
