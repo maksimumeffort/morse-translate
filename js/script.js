@@ -28,6 +28,13 @@ export const translateToMorse = (...str) => {
 // translate input (morse code) into english
 
 export const translateToEng = (...str) => {
+  if (str.length !== 1) {
+    throw argNumsError;
+  }
+  if (typeof str[0] !== "string") {
+    throw argTypeError;
+  }
+
   const morseArray = str[0].split(" ");
   const engTranslArray = [];
   console.log(morseArray);
@@ -49,6 +56,8 @@ export const translateToEng = (...str) => {
   });
   return engTranslArray.join("").replace(/[.]+/, " ");
 };
+
+// 
 
 // Bonus:
 // - handle special characters

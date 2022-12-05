@@ -50,28 +50,20 @@ describe("Test cases for function that translates morse code to english", () => 
     expect(translateToEng(".... . .-.. .-.. ---   - .... . .-. .")).toBe(
       "HELLO THERE"
     );
-    // expect(translateToEng("hElLo tHErE")).toBe(
-    //   ".... . .-.. .-.. ---   - .... . .-. ."
-    // );
   });
 
-  // it("should return capitalized words in sentence", () => {
-  //   expect(translateToMorse("a")).toBe(".-");
-  //   expect(translateToMorse("aLeX")).toBe(".- .-.. . -..-");
-  // });
+  it("should take only one argument", () => {
+    expect(() => {
+      translateToEng("hello", 0);
+    }).toThrow(argNumsError);
+    expect(() => {
+      translateToEng();
+    }).toThrow(argNumsError);
+  });
 
-  // it("should take only one argument", () => {
-  //   expect(() => {
-  //     translateToMorse("hello", 0);
-  //   }).toThrow(argNumsError);
-  //   expect(() => {
-  //     translateToMorse();
-  //   }).toThrow(argNumsError);
-  // });
-
-  // it("should only take a string as argument", () => {
-  //   expect(() => {
-  //     translateToMorse(124);
-  //   }).toThrow(argTypeError);
-  // });
+  it("should only take a string as argument", () => {
+    expect(() => {
+      translateToEng(124);
+    }).toThrow(argTypeError);
+  });
 });
