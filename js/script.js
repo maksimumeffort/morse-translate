@@ -1,5 +1,6 @@
 const morseDict = require("./data");
-const domObjects = require("./dom");
+const jsdom = require("./dom");
+const { JSDOM } = jsdom;
 
 // handle errors
 const argTypeError = new Error("Argument should be a string");
@@ -37,7 +38,7 @@ export const translateToEng = (...str) => {
 
   const morseArray = str[0].split(" ");
   const engTranslArray = [];
-  console.log(morseArray);
+  // console.log(morseArray);
   const engArray = morseArray.map((el) => {
     // console.log(el);
     Object.entries(morseDict.dict).forEach(([key, value]) => {
@@ -45,22 +46,40 @@ export const translateToEng = (...str) => {
         return engTranslArray.push(".");
       }
       if (el === value) {
-        console.log(el, "is ", key);
+        // console.log(el, "is ", key);
         return engTranslArray.push(key);
       }
       // else {
       //   return engTranslArray.push("_");
       // }
     });
-    console.log(engTranslArray);
+    // console.log(engTranslArray);
   });
   return engTranslArray.join("").replace(/[.]+/, " ");
 };
 
-// 
+// translate button functionality
+
+// export const clickTranslate = (isMorse = true) => {
+//   jsdom.engInputField.innerHTML = "howdy";
+//   console.log(jsdom);
+//   return jsdom.engInputField;
+// };
+
+// reverse button functionality
+
+// export const clickReverse = (isMorse = true) => {
+//   return isMorse === true ? false : true;
+// };
+
+// jsdom.reverseBtn.addEventListener("click", () => {
+//   clickReverse();
+// });
 
 // Bonus:
 // - handle special characters
 // - detect if morse code / english and translate
 
 // edge cases?
+
+// clickTranslate("hello");

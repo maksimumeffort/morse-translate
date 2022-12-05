@@ -1,8 +1,21 @@
-import { translateToMorse, translateToEng } from "./script.js";
+/**
+ * @jest-environment jsdom
+ */
+
+import { translateToMorse, translateToEng, clickTranslate } from "./script.js";
+
+import {
+  morseInputField,
+  engInputField,
+  reverseBtn,
+  translateBtn,
+} from "./dom.js";
 
 const argTypeError = new Error("Argument should be a string");
 
 const argNumsError = new Error("You can only provide one argument");
+
+// test for eng to morse
 
 describe("Test cases for function that translates english to morse code", () => {
   it("should return correct value in morse code", () => {
@@ -40,6 +53,8 @@ describe("Test cases for function that translates english to morse code", () => 
   });
 });
 
+// test for morse to eng
+
 describe("Test cases for function that translates morse code to english", () => {
   it("should return correct value in english", () => {
     expect(translateToEng(".-")).toBe("A");
@@ -66,4 +81,25 @@ describe("Test cases for function that translates morse code to english", () => 
       translateToEng(124);
     }).toThrow(argTypeError);
   });
+});
+
+// test the jsdom
+
+describe("test cases for jsdom", () => {
+  it("uses jsdom in this test file", () => {
+    const element = document.createElement("div");
+    expect(element).not.toBeNull();
+  });
+  // it("recognises translate button", () => {
+  //   const clickLog = window.console.log("clicked");
+  //   expect(clickTranslate()).toBe(clickLog);
+  // });
+
+  // it("recognises the engInput value", () => {
+  //   const inputField = document.querySelector("#engInputField");
+  //   inputField.innerHTML = "howdy";
+  //   // const inputLog = window.console.log("hello");
+
+  //   expect(clickTranslate()).toBe("howdy");
+  // });
 });
