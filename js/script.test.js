@@ -10,8 +10,8 @@ describe("Test cases for function that translates english to morse code", () => 
     expect(translateToMorse("Alex")).toBe(".- .-.. . -..-");
   });
 
-  // it("should be case insensitive", () => {
-  //   expect(translateToMorse("a")).toBe(".-");
-  //   // expect(translateToMorse("aLeX")).toBe(".- .-.. . -..-");
-  // });
+  it("should be case insensitive", () => {
+    expect(translateToMorse("a")).toBe(".-");
+    expect(translateToMorse("aLeX")).toBe(".- .-.. . -..-");
+  });
 });

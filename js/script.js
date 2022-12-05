@@ -7,14 +7,12 @@ const argTypeError = new Error("Argument should be a string");
 const argNumsError = new Error("You can only provide one argument");
 
 export const translateToMorse = (...str) => {
-  const input = str;
-  const dictionary = Object.entries(morseDict);
-  let result = "";
+  const strArray = str[0].split("").map((el) => el.toUpperCase());
+  const resultArray = strArray.map((el) => {
+    return morseDict.dict[el];
+  });
 
-  console.log(morseDict);
-
-  console.log(input);
-  return;
+  return resultArray.join(" ");
 };
 
 // 1 space between english WORDS
