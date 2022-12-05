@@ -14,4 +14,19 @@ describe("Test cases for function that translates english to morse code", () => 
     expect(translateToMorse("a")).toBe(".-");
     expect(translateToMorse("aLeX")).toBe(".- .-.. . -..-");
   });
+
+  it("should handle spaces in a sentence correctly", () => {
+    expect(translateToMorse("hello there")).toBe(
+      ".... . .-.. .-.. ---   - .... . .-. ."
+    );
+    expect(translateToMorse("hElLo tHErE")).toBe(
+      ".... . .-.. .-.. ---   - .... . .-. ."
+    );
+  });
+
+  it("should take only one argument", () => {
+    expect(() => {
+      translateToMorse("hello", 0);
+    }).toThrow(argNumsError);
+  });
 });

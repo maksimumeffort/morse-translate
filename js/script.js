@@ -7,11 +7,15 @@ const argTypeError = new Error("Argument should be a string");
 const argNumsError = new Error("You can only provide one argument");
 
 export const translateToMorse = (...str) => {
+  if (str.length > 1) {
+    console.log("ERROR");
+    throw argNumsError;
+  }
   const strArray = str[0].split("").map((el) => el.toUpperCase());
   const resultArray = strArray.map((el) => {
-    return morseDict.dict[el];
+    return el === " " ? " " : morseDict.dict[el];
   });
-
+  console.log(resultArray.join(" "));
   return resultArray.join(" ");
 };
 
