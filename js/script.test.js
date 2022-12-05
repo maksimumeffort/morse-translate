@@ -28,5 +28,14 @@ describe("Test cases for function that translates english to morse code", () => 
     expect(() => {
       translateToMorse("hello", 0);
     }).toThrow(argNumsError);
+    expect(() => {
+      translateToMorse();
+    }).toThrow(argNumsError);
+  });
+
+  it("should only take a string as argument", () => {
+    expect(() => {
+      translateToMorse(124);
+    }).toThrow(argTypeError);
   });
 });
