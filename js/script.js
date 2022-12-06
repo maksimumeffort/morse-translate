@@ -67,6 +67,8 @@ export const translateToEng = (...str) => {
   return engTranslArray.join("").replace(/[.]+/, " ");
 };
 
+// TODO comment all code below for tests to run
+
 // translate button functionality
 let isEng = true;
 export const clickTranslate = (string, isEng) => {
