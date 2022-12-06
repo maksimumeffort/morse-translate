@@ -69,49 +69,49 @@ export const translateToEng = (...str) => {
 
 // TODO comment all code below for tests to run
 
-// // translate button functionality
-// let isEng = true;
-// export const clickTranslate = (string, isEng) => {
-//   return isEng === true ? translateToMorse(string) : translateToEng(string);
-// };
+// translate button functionality
+let isEng = true;
+export const clickTranslate = (string, isEng) => {
+  return isEng === true ? translateToMorse(string) : translateToEng(string);
+};
 
-// translateBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   // console.log(inputField.value);
-//   const inputFieldValue = inputField.value;
-//   const output = clickTranslate(inputFieldValue, isEng);
+translateBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  // console.log(inputField.value);
+  const inputFieldValue = inputField.value;
+  const output = clickTranslate(inputFieldValue, isEng);
 
-//   outputField.innerHTML = output;
+  outputField.innerHTML = output;
 
-//   // const inputValue =
-//   //   isMorse === true ? jsdom.engInputField.value : jsdom.morseInputField.value;
-//   // console.log("translated");
-//   // clickTranslate(inputValue, isMorse);
-//   // console.log(inputField);
-// });
+  // const inputValue =
+  //   isMorse === true ? jsdom.engInputField.value : jsdom.morseInputField.value;
+  // console.log("translated");
+  // clickTranslate(inputValue, isMorse);
+  // console.log(inputField);
+});
 
-// // reverse button functionality
-// export const clickReverse = () => {
-//   console.log("reversed");
-//   if (isEng === true) {
-//     return (isEng = false);
-//   } else {
-//     isEng = true;
-//   }
-// };
+// reverse button functionality
+export const clickReverse = () => {
+  console.log("reversed");
+  if (isEng === true) {
+    return (isEng = false);
+  } else {
+    isEng = true;
+  }
+};
 
-// reverseBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   clickReverse();
-//   console.log(`English is ${isEng}`);
-//   if (isEng === true) {
-//     inputLabel.innerHTML = "English";
-//     outputLabel.innerHTML = "Morse Code";
-//   } else {
-//     inputLabel.innerHTML = "Morse Code";
-//     outputLabel.innerHTML = "English";
-//   }
-// });
+reverseBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  clickReverse();
+  console.log(`English is ${isEng}`);
+  if (isEng === true) {
+    inputLabel.innerHTML = "English";
+    outputLabel.innerHTML = "Morse Code";
+  } else {
+    inputLabel.innerHTML = "Morse Code";
+    outputLabel.innerHTML = "English";
+  }
+});
 
 // // Bonus:
 // // - handle special characters
