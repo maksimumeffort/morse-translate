@@ -2,7 +2,12 @@
  * @jest-environment jsdom
  */
 
-import { translateToMorse, translateToEng, clickTranslate } from "./script.js";
+import {
+  translateToMorse,
+  translateToEng,
+  clickTranslate,
+  clickReverse,
+} from "./script.js";
 
 import {
   morseInputField,
@@ -90,10 +95,17 @@ describe("test cases for jsdom", () => {
     const element = document.createElement("div");
     expect(element).not.toBeNull();
   });
-  // it("recognises translate button", () => {
-  //   const clickLog = window.console.log("clicked");
-  //   expect(clickTranslate()).toBe(clickLog);
-  // });
+
+  it("recognises reverse button", () => {
+    // const clickLog = window.console.log("reversed");
+    expect(clickReverse()).toBe(false);
+  });
+
+  it("recognises translate button", () => {
+    const clickLog = window.console.log("clicked");
+    expect(clickTranslate()).toBe(undefined);
+    expect(clickTranslate("hello")).toBe("hello");
+  });
 
   // it("recognises the engInput value", () => {
   //   const inputField = document.querySelector("#engInputField");

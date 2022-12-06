@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  //   text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  border: 1px solid red;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  align-items: center;
+}
+
+.engInputAndLabel {
+  border: 1px solid green;
+}
+
+.btn {
+  height: 40px;
+  margin-top: 25%;
+}

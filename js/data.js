@@ -1,4 +1,4 @@
-const dict = {
+export const dict = {
   A: ".-",
   B: "-...",
   C: "-.-.",
@@ -26,7 +26,7 @@ const dict = {
   Z: "--..",
 };
 
-const nums = {
+export const nums = {
   0: "-----",
   1: ".----",
   2: "..---",
@@ -39,7 +39,7 @@ const nums = {
   9: "----.",
 };
 
-const punct = {
+export const punct = {
   period: ".-.-.-",
   comma: "--..--",
   questionMark: "..--..",
@@ -51,7 +51,7 @@ const punct = {
   quotations: ".-..-.",
 };
 
-const special = {
+export const special = {
   underscore: "..--.-",
   addition: ".-.-.",
   subtraction: "-....-",
@@ -62,9 +62,10 @@ const special = {
   leftParenthesis: "-.--.",
 };
 
-module.exports = {
-  dict,
-  nums,
-  punct,
-  special,
-};
+
+// module.exports = {
+//   dict,
+//   nums,
+//   punct,
+//   special,
+// };

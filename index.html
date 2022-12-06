@@ -4,16 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script.js" type="module" defer></script>
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Morse Code Translator</title>
   </head>
   <body>
-    <h2>Morse Code Translator</h2>
-    <label for="engInput">English</label>
-    <input id="engInput" type="text" placeholder="" />
-    <button id="reverse">Reverse</button>
-    <button id="translate">Translate</button>
-    <label for="morseInput">Morse Code</label>
-    <input id="morseInput" type="text" placeholder="" />
+    <header>
+      <h2 class="title">Morse Code Translator</h2>
+    </header>
+    <main>
+      <form method="POST"></form>
+
+          <label for="engInput">English</label>
+          <input
+            id="engInput"
+            class="input"
+            type="text"
+            placeholder="Place text here"
+          />
+  
+          <button id="reverse" class="btn">Reverse</button>
+          <button id="translate" type="submit" class="btn">Translate</button>
+  
+          <label for="morseInput">Morse Code</label>
+          <input
+            id="morseInput"
+            type="text"
+            class="input"
+            placeholder="Place Morse code here"
+          />
+    
+      </section>
+    </main>
   </body>
 </html>

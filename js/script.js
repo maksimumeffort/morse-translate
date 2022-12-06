@@ -1,6 +1,7 @@
-const morseDict = require("./data");
-const jsdom = require("./dom");
-const { JSDOM } = jsdom;
+import { dict, special, nums, punct } from "./data.js";
+// const morseDict = require("./data");
+// const jsdom = require("./dom");
+// const { JSDOM } = jsdom;
 
 // handle errors
 const argTypeError = new Error("Argument should be a string");
@@ -17,7 +18,7 @@ export const translateToMorse = (...str) => {
 
   const engArray = str[0].split("").map((el) => el.toUpperCase());
   const morseArray = engArray.map((el) => {
-    return el === " " ? " " : morseDict.dict[el];
+    return el === " " ? " " : dict[el];
   });
   // console.log(resultArray.join(" "));
   return morseArray.join(" ");
@@ -41,7 +42,7 @@ export const translateToEng = (...str) => {
   // console.log(morseArray);
   const engArray = morseArray.map((el) => {
     // console.log(el);
-    Object.entries(morseDict.dict).forEach(([key, value]) => {
+    Object.entries(dict).forEach(([key, value]) => {
       if (el === "") {
         return engTranslArray.push(".");
       }
@@ -59,21 +60,34 @@ export const translateToEng = (...str) => {
 };
 
 // translate button functionality
+let isMorse = true;
+export const clickTranslate = (string, isMorse) => {
+  return string;
+  // jsdom.engInputField.innerHTML = "howdy";
+  // console.log(jsdom);
+  // return jsdom.engInputField;
+};
 
-// export const clickTranslate = (isMorse = true) => {
-//   jsdom.engInputField.innerHTML = "howdy";
-//   console.log(jsdom);
-//   return jsdom.engInputField;
-// };
+// jsdom.translateBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   const inputValue =
+//     isMorse === true ? jsdom.engInputField.value : jsdom.morseInputField.value;
+//   console.log("translated");
+//   clickTranslate(inputValue, isMorse);
+// });
 
 // reverse button functionality
-
-// export const clickReverse = (isMorse = true) => {
-//   return isMorse === true ? false : true;
-// };
+export const clickReverse = () => {
+  if (isMorse === true) {
+    return (isMorse = false);
+  } else {
+    isMorse = true;
+  }
+};
 
 // jsdom.reverseBtn.addEventListener("click", () => {
 //   clickReverse();
+//   console.log(`morse is ${isMorse}`);
 // });
 
 // Bonus:
