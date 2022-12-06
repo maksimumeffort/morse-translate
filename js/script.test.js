@@ -90,28 +90,28 @@ describe("Test cases for function that translates morse code to english", () => 
 
 // test the jsdom
 
-describe("test cases for jsdom", () => {
-  it("uses jsdom in this test file", () => {
-    const element = document.createElement("div");
-    expect(element).not.toBeNull();
-  });
+// describe("test cases for jsdom", () => {
+//   it("uses jsdom in this test file", () => {
+//     const element = document.createElement("div");
+//     expect(element).not.toBeNull();
+//   });
 
-  it("recognises reverse button", () => {
-    // const clickLog = window.console.log("reversed");
-    expect(clickReverse()).toBe(false);
-  });
+//   it("recognises reverse button", () => {
+//     // const clickLog = window.console.log("reversed");
+//     expect(clickReverse()).toBe(false);
+//   });
 
-  it("recognises translate button", () => {
-    const clickLog = window.console.log("clicked");
-    expect(clickTranslate()).toBe(undefined);
-    expect(clickTranslate("hello")).toBe("hello");
-  });
+//   it("recognises translate button", () => {
+//     const clickLog = window.console.log("clicked");
+//     expect(clickTranslate()).toBe(undefined);
+//     expect(clickTranslate("hello")).toBe("hello");
+//   });
 
-  // it("recognises the engInput value", () => {
-  //   const inputField = document.querySelector("#engInputField");
-  //   inputField.innerHTML = "howdy";
-  //   // const inputLog = window.console.log("hello");
+//   // it("recognises the engInput value", () => {
+//   //   const inputField = document.querySelector("#engInputField");
+//   //   inputField.innerHTML = "howdy";
+//   //   // const inputLog = window.console.log("hello");
 
-  //   expect(clickTranslate()).toBe("howdy");
-  // });
-});
+//   //   expect(clickTranslate()).toBe("howdy");
+//   // });
+// });
