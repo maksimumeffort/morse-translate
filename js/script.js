@@ -1,4 +1,12 @@
 import { dict, special, nums, punct } from "./data.js";
+import {
+  inputLabel,
+  outputLabel,
+  inputField,
+  outputField,
+  reverseBtn,
+  translateBtn,
+} from "./dom.js";
 // const morseDict = require("./data");
 // const jsdom = require("./dom");
 // const { JSDOM } = jsdom;
@@ -60,35 +68,48 @@ export const translateToEng = (...str) => {
 };
 
 // translate button functionality
-let isMorse = true;
-export const clickTranslate = (string, isMorse) => {
-  return string;
-  // jsdom.engInputField.innerHTML = "howdy";
-  // console.log(jsdom);
-  // return jsdom.engInputField;
+let isEng = true;
+export const clickTranslate = (string, isEng) => {
+  return isEng === true ? translateToMorse(string) : translateToEng(string);
 };
 
-// jsdom.translateBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const inputValue =
-//     isMorse === true ? jsdom.engInputField.value : jsdom.morseInputField.value;
-//   console.log("translated");
-//   clickTranslate(inputValue, isMorse);
-// });
+translateBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  // console.log(inputField.value);
+  const inputFieldValue = inputField.value;
+  const output = clickTranslate(inputFieldValue, isEng);
+
+  outputField.innerHTML = output;
+
+  // const inputValue =
+  //   isMorse === true ? jsdom.engInputField.value : jsdom.morseInputField.value;
+  // console.log("translated");
+  // clickTranslate(inputValue, isMorse);
+  // console.log(inputField);
+});
 
 // reverse button functionality
 export const clickReverse = () => {
-  if (isMorse === true) {
-    return (isMorse = false);
+  console.log("reversed");
+  if (isEng === true) {
+    return (isEng = false);
   } else {
-    isMorse = true;
+    isEng = true;
   }
 };
 
-// jsdom.reverseBtn.addEventListener("click", () => {
-//   clickReverse();
-//   console.log(`morse is ${isMorse}`);
-// });
+reverseBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  clickReverse();
+  console.log(`English is ${isEng}`);
+  if (isEng === true) {
+    inputLabel.innerHTML = "English";
+    outputLabel.innerHTML = "Morse Code";
+  } else {
+    inputLabel.innerHTML = "Morse Code";
+    outputLabel.innerHTML = "English";
+  }
+});
 
 // Bonus:
 // - handle special characters

@@ -13,28 +13,36 @@
       <h2 class="title">Morse Code Translator</h2>
     </header>
     <main>
-      <form method="POST"></form>
-
-          <label for="engInput">English</label>
-          <input
+      <form>
+        <FormField name="" class="form-field">
+          <label for="engInput" id="inputLabel">English</label>
+          <textarea
             id="engInput"
             class="input"
             type="text"
             placeholder="Place text here"
-          />
-  
+            cols="30"
+            rows="10"
+          ></textarea>
+        </FormField>
+
+        <FormField name="" class="buttons-field">
           <button id="reverse" class="btn">Reverse</button>
           <button id="translate" type="submit" class="btn">Translate</button>
-  
-          <label for="morseInput">Morse Code</label>
-          <input
+        </FormField>
+
+        <FormField class="form-field">
+          <label for="morseInput" id="outputLabel">Morse Code</label>
+          <textarea
             id="morseInput"
-            type="text"
             class="input"
-            placeholder="Place Morse code here"
-          />
-    
-      </section>
+            type="text"
+            placeholder="Translation"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </FormField>
+      </form>
     </main>
   </body>
 </html>

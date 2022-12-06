@@ -1,14 +1,18 @@
-const morseInputField = document.querySelector("#morseInput");
+export const inputLabel = document.querySelector("#inputLabel");
 
-const engInputField = document.querySelector("#engIput");
+export const inputField = document.querySelector("#engInput");
 
-const reverseBtn = document.querySelector("#reverse");
+export const outputLabel = document.querySelector("#outputLabel");
 
-const translateBtn = document.querySelector("#translate");
+export const outputField = document.querySelector("#morseInput");
 
-module.exports = {
-  morseInputField,
-  engInputField,
-  reverseBtn,
-  translateBtn,
-};
+export const reverseBtn = document.querySelector("#reverse");
+
+export const translateBtn = document.querySelector("#translate");
+
+// module.exports = {
+//   morseInputField,
+//   engInputField,
+//   reverseBtn,
+//   translateBtn,
+// };

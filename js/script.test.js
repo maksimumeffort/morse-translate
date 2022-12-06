@@ -9,12 +9,12 @@ import {
   clickReverse,
 } from "./script.js";
 
-import {
-  morseInputField,
-  engInputField,
-  reverseBtn,
-  translateBtn,
-} from "./dom.js";
+// import {
+//   morseInputField,
+//   engInputField,
+//   reverseBtn,
+//   translateBtn,
+// } from "./dom.js";
 
 const argTypeError = new Error("Argument should be a string");
 
