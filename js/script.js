@@ -67,6 +67,12 @@ export const translateToEng = (...str) => {
   return engTranslArray.join("").replace(/[.]+/, " ");
 };
 
+// Bonus:
+// - handle special characters
+// - detect if morse code / english and translate
+
+// edge cases?
+
 // TODO comment all code below for tests to run
 
 // translate button functionality
@@ -113,10 +119,6 @@ reverseBtn.addEventListener("click", (event) => {
   }
 });
 
-// // Bonus:
-// // - handle special characters
-// // - detect if morse code / english and translate
 
-// // edge cases?
 
-// // clickTranslate("hello");
+
