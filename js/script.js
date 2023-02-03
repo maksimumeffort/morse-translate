@@ -58,9 +58,7 @@ export const translateToEng = (...str) => {
         // console.log(el, "is ", key);
         return engTranslArray.push(key);
       }
-      // else {
-      //   return engTranslArray.push("_");
-      // }
+      
     });
     // console.log(engTranslArray);
   });
