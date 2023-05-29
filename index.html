@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/script.js" type="module" defer></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Morse Code Translator</title>
+  </head>
+  <body>
+    <section class="container">
+      <header class="container-header">
+        <h2 class="title">Morse Code Translator</h2>
+      </header>
+      <main class="container-main">
+        <form class="container-main__form">
+          <FormField name="" class="container-main__form--form-field">
+            <label for="engInput" id="inputLabel">English</label>
+            <textarea
+              id="engInput"
+              class="input"
+              type="text"
+              placeholder="Place text here"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </FormField>
+
+          <FormField name="" class="container-main__form--buttons-field">
+            <button id="reverse" class="btn">Reverse</button>
+            <button id="translate" type="submit" class="btn">Translate</button>
+          </FormField>
+
+          <FormField class="container-main__form--form-field">
+            <label for="morseInput" id="outputLabel">Morse Code</label>
+            <textarea
+              id="morseInput"
+              class="input"
+              type="text"
+              placeholder="Translation"
+              cols="30"
+              rows="10"
+              disabled="disabled"
+            ></textarea>
+          </FormField>
+        </form>
+      </main>
+    </section>
+  </body>
+</html>
