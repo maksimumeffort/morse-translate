@@ -44,7 +44,7 @@ Create a user interface that allows the user to either input some English text o
 ```npm install```
 -   To deploy application on local server run:
 ```npm install http-server -g```
--   then 
+-   then run:
 ```http-server``` 
 
 ---
