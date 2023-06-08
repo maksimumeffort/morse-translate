@@ -1,4 +1,4 @@
-# Title {Morse Translate}
+# Morse Translate
 
 ## Demo & Snippets
 
