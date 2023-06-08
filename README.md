@@ -76,7 +76,7 @@ Create a user interface that allows the user to either input some English text o
 ## Future Goals
 
 -   Add functionality for translation tool to recognise numbers and special characters
--   Add functionality for translator to find out 
+-   Add functionality for translation tool to support more languages
 
 ---
 
