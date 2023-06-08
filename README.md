@@ -32,7 +32,7 @@ Create a user interface that allows the user to either input some English text o
 
 -   Explore and discover edge cases in your code to further develop your tests
 
-### purpose of project
+### Purpose of project
 -   The focus of this project will be putting your code into modules and creating unit tests The User Interface will have to look good but should remain simple (additional features, ie. sounds, lights, etc, should only be added once the MVP has been completed.)
 -   Stack used: JavaScript, HTML, CSS
 
@@ -40,11 +40,11 @@ Create a user interface that allows the user to either input some English text o
 
 ## Build Steps
 
-After forking repository in command line run:
+-   After forking repository in command line run:
 ```npm install```
-To deploy application on local server run:
+-   To deploy application on local server run:
 ```npm install http-server -g```
-then 
+-   then 
 ```http-server``` 
 
 ---
